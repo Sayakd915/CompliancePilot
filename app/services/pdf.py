@@ -18,6 +18,7 @@ def extract_text_from_bytes(pdf_bytes: bytes) -> str:
     with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
         tmp.write(pdf_bytes)
         tmp.flush()
+        tmp_path = tmp.name
         
     try:
         text_parts = []

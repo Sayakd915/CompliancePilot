@@ -54,7 +54,7 @@ async def get_conversation_from_user(user_id: str) -> list[dict]:
         {"user_id": user_id},
         {"_id": 0},
     ).sort("created_at", DESCENDING)
-    return await cursor.to_list(length=100)
+    return await cur.to_list(length=100)
 
 async def get_conversation_from_document(document_id: str, user_id: str) -> dict | None:
     db = get_db()

@@ -4,7 +4,7 @@ from pydantic import Field
 class Settings(BaseSettings):
 
     groq_api_key: str = Field(..., env="GROQ_API_KEY")
-    groq_model: str = "llama-3.1-70b-versatile"
+    groq_model: str = "llama-3.3-70b-versatile"
 
     supabase_url: str = Field(..., env="SUPABASE_URL")
     supabase_anon_key: str = Field(..., env="SUPABASE_ANON_KEY")
@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     jwt_expire_minutes: int = 1440
 
     app_env: str = "development"
-    allowed_origins: str = "http://localhost:3000, http://localhost:8080"
+    allowed_origins: str = "http://localhost:3000,http://localhost:8080"
 
     langsmith_tracing: bool = True
     langsmith_endpoint: str = Field(..., env="LANGSMITH_ENDPOINT")

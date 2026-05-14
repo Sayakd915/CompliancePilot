@@ -26,5 +26,8 @@ python-dotenv==1.2.2
 
 pydantic==2.13.3
 pydantic-settings==2.14.0
-
+'pydantic[email]'
 langsmith==0.8.0
+
+numpy
+pandas

@@ -20,6 +20,7 @@ def get_supabase_admin() -> Client:
 ## --------------------------Document Ops----------------------------------------------------
 
 async def create_document_record(
+    document_id: str,
     user_id: str,
     filename: str,
     storage: str,
@@ -29,9 +30,10 @@ async def create_document_record(
     response = (
         client.table("documents")
         .insert({
+            "id":document_id,
             "user_id":user_id,
             "filename":filename,
-            "storage":storage,
+            "storage_path":storage,
             "file_size_bytes":file_size_bytes
         }).execute()
     )
@@ -67,7 +69,8 @@ async def get_document_by_id(document_id: str, user_id: str) -> dict | None:
         .select("*")
         .eq("id", document_id)
         .eq("user_id",user_id)
-        .maybe_single()
         .execute()
     )
-    return response.data
+    if response.data:
+        return response.data[0]
+    return None
