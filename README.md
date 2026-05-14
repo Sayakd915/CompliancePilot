@@ -210,4 +210,4 @@ PUT /profile      { "full_name": "..." }
 
 ## License
 
-MIT
+Apache License 2.0
