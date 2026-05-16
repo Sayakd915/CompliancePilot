@@ -1,42 +1,89 @@
+# Core framework
 fastapi==0.115.12
-uvicorn[standard]==0.34.3
+uvicorn[standard]==0.47.0
+starlette==0.46.2
+click==8.3.3
 
+# Email validation
 email-validator==2.2.0
 
-# LangChain ecosystem – agent orchestration
-langchain==0.3.25
-langchain-core==0.3.58
-langchain-groq==0.3.2
-langgraph==0.4.8
-langchain-text-splitters==0.3.8
+# LangChain + LangGraph
+langchain==0.3.30
+langchain-core==0.3.86
+langchain-groq==0.3.8
+langchain-text-splitters==0.3.11
+langgraph==0.2.70
+langgraph-checkpoint==2.1.2
+langgraph-sdk==0.1.74
+langsmith==0.8.4
+groq==0.37.1
 
-# PDF text extraction
+# PDF extraction
 pdfplumber==0.11.9
+pdfminer.six==20251230
+pillow==12.2.0
+pypdfium2==5.8.0
 
-# Async MongoDB driver
+# MongoDB
 motor==3.7.1
 pymongo==4.11.3
 
-# Supabase (Postgres + Storage + Auth)
+# Supabase
 supabase==2.15.2
+gotrue==2.12.4
+postgrest==1.0.2
+realtime==2.4.3
+storage3==0.11.3
+supafunc==0.9.4
 
-# Redis cache (Upstash HTTP-based SDK)
+# Redis
 upstash-redis==1.3.0
 
-# Auth – JWT token creation & verification
+# Auth
 python-jose==3.3.0
 passlib[bcrypt]==1.7.4
+bcrypt==5.0.0
+cryptography==48.0.0
 
-# HTTP utilities
+# HTTP
 httpx==0.28.1
-python-multipart==0.0.20
-
-# Environment variables
-python-dotenv==1.1.0
+httpcore==1.0.9
+httptools==0.7.1
+h11==0.16.0
+h2==4.3.0
+hpack==4.1.0
+hyperframe==6.1.0
+aiohttp==3.13.5
+requests==2.34.1
+requests-toolbelt==1.0.0
 
 # Data validation
 pydantic==2.11.4
 pydantic-settings==2.9.1
+pydantic-core==2.33.2
 
-# LangSmith tracing (free up to 5k traces/month)
-langsmith==0.3.42
+# Environment + utilities
+python-dotenv==1.1.0
+python-multipart==0.0.20
+PyYAML==6.0.3
+packaging==25.0
+tenacity==9.1.4
+orjson==3.11.9
+ormsgpack==1.12.2
+xxhash==3.7.0
+zstandard==0.25.0
+uuid-utils==0.15.0
+SQLAlchemy==2.0.49
+typing-extensions==4.15.0
+typing-inspection==0.4.2
+annotated-types==0.7.0
+anyio==4.13.0
+sniffio==1.3.1
+distro==1.9.0
+deprecation==2.1.0
+dnspython==2.8.0
+idna==3.15
+certifi==2026.4.22
+charset-normalizer==3.4.7
+urllib3==2.7.0
+StrEnum==0.4.15
