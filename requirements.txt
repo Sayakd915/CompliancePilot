@@ -1,7 +1,6 @@
 fastapi==0.115.12
 uvicorn[standard]==0.34.3
 
-# Email validation — declared explicitly to avoid the
 email-validator==2.2.0
 
 # LangChain ecosystem – agent orchestration
